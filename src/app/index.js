@@ -2,25 +2,18 @@ import {BrowserModule} from '@angular/platform-browser';
 import {UIView, UIRouterModule, provideUIRouter} from 'ui-router-ng2';
 import {STATES, MyUIRouterConfig} from './routes';
 
-import {TechsModule} from './techs';
-
-import {MainComponent} from './main';
-import {HeaderComponent} from './header';
-import {TitleComponent} from './title';
-import {FooterComponent} from './footer';
-import {MainMenuComponent} from './modules/main-menu';
+import {HomeComponent} from './modules/home.js';
+import {HeaderComponent} from './shared/header.component.js';
+import {FooterComponent} from './shared/footer.component.js';
 
 @UIRouterModule({
   imports: [
-    BrowserModule,
-    TechsModule
+    BrowserModule
   ],
   declarations: [
-    MainComponent,
+    HomeComponent,
     HeaderComponent,
-    TitleComponent,
-    FooterComponent,
-    MainMenuComponent
+    FooterComponent
   ],
   providers: [
     provideUIRouter({configClass: MyUIRouterConfig})

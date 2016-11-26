@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'fountain-app',
+  selector: 'us',
   template: require('../views/us.html')
 })
 export class UsComponent {}

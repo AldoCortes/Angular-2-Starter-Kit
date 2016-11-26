@@ -1,0 +1,22 @@
+.social-link {
+  background-image: url(#{$img-url}/common/buttons.png);
+  width:90px;
+  height: 79px;
+  background-repeat: no-repeat;
+  transition-property: background;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+
+  .facebook {
+    background-position: 0 0;
+    &:hover {
+      background-position: 0 -79px;
+    }
+  }
+  .instagram {
+    background-position: -80px 0;
+    &:hover {
+      background-position: -80 -79px;
+    }
+  }
+}

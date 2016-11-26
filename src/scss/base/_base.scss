@@ -3,6 +3,7 @@ html, body, #root {
   height: 100%;
   font-family: $main-font;
   background-color: $white;
+  font-size: 1.3em;
 }
 
 body, h1, h2, h3 {
@@ -18,6 +19,12 @@ a {
   }
 }
 
+p {
+  width:100%;
+  display: block;
+  text-align: center;
+}
+
 .main-container {
   display: block;
   min-height: 100%;
@@ -30,9 +37,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2.5em;
   padding: 1rem;
-  background-color: #cf4646;
-  color: white;
+  color: $black;
+  font-weight: 900;
 }
 .title-h1 {
   font-weight: 300;
@@ -56,4 +64,10 @@ a {
   display: block;
   clear: both;
   background-color: transparent;
+  margin: 0 auto;
+}
+
+.row-960 {
+  @extend .row;
+  max-width: 960px;
 }

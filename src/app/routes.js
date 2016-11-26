@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
 import {UIRouter} from 'ui-router-ng2';
 
-import {MainComponent} from './main';
-import {UsComponent} from './page/us';
+import {HomeComponent} from './modules/home.js';
+import {UsComponent} from './modules/us.js';
 
 export const STATES = [
   {
-    name: 'App',
+    name: 'Home',
     url: '/',
-    component: MainComponent
+    component: HomeComponent
   },
   {
     name: 'Us',
@@ -20,6 +20,6 @@ export const STATES = [
 @Injectable()
 export class MyUIRouterConfig {
   configure(uiRouter: UIRouter) {
-    uiRouter.urlRouterProvider.otherwise(() => uiRouter.stateService.go('App'));
+    uiRouter.urlRouterProvider.otherwise(() => uiRouter.stateService.go('Home'));
   }
 }
