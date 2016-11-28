@@ -71,3 +71,7 @@ p {
   @extend .row;
   max-width: 960px;
 }
+
+.gray-background {
+  background-color: $light-gray;
+}

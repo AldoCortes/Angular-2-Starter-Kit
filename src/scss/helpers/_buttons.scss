@@ -4,19 +4,27 @@
   height: 79px;
   background-repeat: no-repeat;
   transition-property: background;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
+  display: inline-block;
+  overflow: hidden;
+}
 
-  .facebook {
-    background-position: 0 0;
-    &:hover {
-      background-position: 0 -79px;
-    }
+.social-link.facebook {
+  background-position: 0 0;
+  &:hover {
+    background-position: 0 -79px;
   }
-  .instagram {
-    background-position: -80px 0;
-    &:hover {
-      background-position: -80 -79px;
-    }
+}
+
+.social-link.instagram {
+  background-position: -90px 0;
+  &:hover {
+    background-position: -90px -79px;
   }
+}
+
+.ghost-button {
+  width:100%;
+  height:100%;
 }

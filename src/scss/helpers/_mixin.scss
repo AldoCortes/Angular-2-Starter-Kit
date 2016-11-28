@@ -103,6 +103,16 @@ $break-extra-large: 80em; // >= 1280px @ 16px
   }
 }
 
+@mixin center-absolute($width, $height) {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: $width;
+  height:$height;
+  margin-top: $height/2;
+  margin-left: $width/2;
+}
+
 // Utilities
 // -------------------------
 
@@ -138,4 +148,4 @@ $break-extra-large: 80em; // >= 1280px @ 16px
   transform: translate(0, 0);
 }
 
-$img_path: '~/resources/img/'; 
+$img_path: '~/resources/img/';
