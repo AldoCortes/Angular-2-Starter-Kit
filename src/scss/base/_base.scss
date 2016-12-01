@@ -75,3 +75,33 @@ p {
 .gray-background {
   background-color: $light-gray;
 }
+
+.spacer {
+  width: 100%;
+  display: block;
+  clear: both;
+  height: 25px;
+}
+
+.content {
+  width:94%;
+  padding: 0 3%;
+  display: block;
+}
+
+.icon {
+  background-image: url(#{$img-url}/common/icons.png);
+  background-repeat: no-repeat;
+  width:40px;
+  height:36px;
+  display: block;
+  margin: 10px auto;
+}
+
+.icon.phone {
+  background-position: -40px 0;
+}
+
+.icon.at {
+  background-position: 0;
+}

@@ -1,7 +1,22 @@
 .main-menu{
 	width:100%;
 	height: 60px;
-	background-color: $black;
+	background-color: $white;
+
+	.desktop-menu {
+	  display: none;
+	  text-align: center;
+	  font-size: 18px;
+
+		a, a:visited {
+			color:$dark-gray;
+			transition: color 0.3s linear;
+
+			&:hover{
+				color: $black;
+			}
+		}
+	}
 }
 
 .main-logo{
@@ -17,16 +32,54 @@
 	}
 }
 
+.main-menu.black {
+	@extend .main-menu;
+	background-color: $black;
+
+	.desktop-menu {
+	  display: none;
+	  text-align: center;
+	  font-size: 18px;
+
+		a, a:visited {
+			color:$light-gray;
+			transition: color 0.3s linear;
+
+			&:hover{
+				color: $white;
+			}
+		}
+	}
+}
+
 @include respond-to('medium'){
 	.main-menu {
 		height: 100px;
 		padding:10px 0px;
+
+		.desktop-menu {
+	    display: block;
+	  }
+	}
+
+	.main-menu.black {
+		height: 100px;
+		padding:10px 0px;
+
+		.desktop-menu {
+	    display: block;
+	  }
 	}
 
 	.main-logo {
-
+		width: 100%;
+		height: auto;
+		padding: 0;
 		img {
+			width: 100%;
 			max-width: 190px;
+			height: auto;
+			margin: 0 auto;
 		}
 	}
 }

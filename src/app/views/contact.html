@@ -1,0 +1,51 @@
+<div class="main-container">
+  <header></header>
+  <div class="row">
+    <div class="row-960">
+      <div class="title">Contacto</div>
+      <div class="content">
+        <p>
+          ¡Queremos hacer realidad tu proyecto digital!<br/>
+          Háblanos de tu idea y la realizaremos juntos.
+        </p>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row-960">
+      <div class="content">
+        <p><span class="icon phone"></span></p>
+        <p>
+          <a class="contact-link" href="tel:5584213531">(55) 8421 5331</a>
+        </p>
+        <p><span class="icon at"></span></p>
+        <p>
+          <a class="contact-link" href="mailto:contacto@ragoo.mx">contacto@ragoo.mx</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row-960">
+      <div class="content">
+        <div class="spacer"></div>
+        <div class="pure-g">
+          <form class="pure-form contact-form">
+            <fieldset class="pure-group">
+              <span class="contact-form-title">Déjanos un adelanto...</span>
+              <input type="text" class="pure-input-1 form-control" required name="user" placeholder="Nombre" [(ngModel)]="name">
+              <input type="email" class="pure-input-1 form-control" required name="email" placeholder="Email" [(ngModel)]="email">
+              <textarea class="pure-input-1 form-control" required name="message" placeholder="Mensaje" [(ngModel)]="message"></textarea>
+            </fieldset>
+            <button class="pure-button pure-input-1 send-button" (click)="leaveMessage()">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</div>

@@ -5,9 +5,15 @@
   margin-top: 50px;
 
   a, a:hover, a:visited {
-    color:$black;
+    color:$dark-gray;
     text-decoration: none;
     outline: none;
+    font-weight: 300;
+    transition: color 0.3s linear;
+
+    &:hover{
+      color: $black;
+    }
   }
 
   p {
@@ -16,6 +22,7 @@
 
   .center-column {
     padding-top:20px;
+    padding-bottom: 20px;
 
     p {
       width:90%;

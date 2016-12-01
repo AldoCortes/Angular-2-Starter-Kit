@@ -1,0 +1,9 @@
+Options All -Indexes
+<Files .htaccess>
+Order allow, deny
+Deny from all
+</Files>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^contact contact_form.php
+</IfModule>

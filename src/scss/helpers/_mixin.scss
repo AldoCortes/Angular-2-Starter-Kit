@@ -80,6 +80,20 @@ $break-extra-large: 80em; // >= 1280px @ 16px
   @return $num / ($num * 0 + 1);
 }
 
+@mixin circular-image($proportion) {
+  background-size: cover;
+  border-top-left-radius: $proportion;
+  border-top-right-radius: $proportion;
+  border-bottom-right-radius: $proportion;
+  border-bottom-left-radius: $proportion;
+  -webkit-border-top-left-radius: $proportion;
+  -moz-border-top-left-radius: $proportion;
+  -webkit-border-bottom-right-radius: $proportion;
+  -moz-border-bottom-right-radius: $proportion;
+
+  border: 2px solid $black;
+}
+
 // retina.scss
 // A helper mixin for applying high-resolution background images (http://www.retinajs.com)
 
