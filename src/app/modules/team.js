@@ -19,8 +19,7 @@ export class TeamComponent implements OnInit {
   }
 
   calculatePositions() {
-    this.boxSize = this.teamMember[0].offsetWidth;
-    console.log(this.boxSize);
+    this.boxSize = this.teamMember[0].offsetWidth - 10;
     if (this.boxSize > 300) {
       this.boxSize = 300;
     }

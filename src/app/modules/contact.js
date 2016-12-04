@@ -12,6 +12,7 @@ export class ContactComponent {
   name: string;
   email: string;
   message: string;
+  previouslySended: boolean = false;
   constructor(_emitterService: EmitterService) {
     this._emitterService = _emitterService;
   }
@@ -20,7 +21,10 @@ export class ContactComponent {
       .subscribe(
         data => JSON.stringify(data),
         error => console.log('ERROR', error),
-        () => console.log('DONE')
+        () => this.handleComplete()
       );
+  }
+  handleComplete() {
+    this.previouslySended = true;
   }
 }

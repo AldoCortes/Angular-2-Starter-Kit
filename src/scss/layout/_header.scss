@@ -7,6 +7,15 @@
   background-color: transparent;
 }
 
+.bottom-decoration {
+  position:absolute;
+  width:70%;
+  height:2px;
+  background-color: $black;
+  bottom: 0;
+  left:15%;
+}
+
 @include respond-to('medium'){
   .header {
     position:relative;

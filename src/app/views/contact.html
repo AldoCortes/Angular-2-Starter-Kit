@@ -32,7 +32,7 @@
       <div class="content">
         <div class="spacer"></div>
         <div class="pure-g">
-          <form class="pure-form contact-form">
+          <form class="pure-form contact-form" *ngIf="!previouslySended">
             <fieldset class="pure-group">
               <span class="contact-form-title">Déjanos un adelanto...</span>
               <input type="text" class="pure-input-1 form-control" required name="user" placeholder="Nombre" [(ngModel)]="name">
@@ -41,6 +41,10 @@
             </fieldset>
             <button class="pure-button pure-input-1 send-button" (click)="leaveMessage()">Enviar</button>
           </form>
+          <div class="pure-u-1 thanks" *ngIf="previouslySended">
+            <p><strong>¡Gracias por la información!</strong></p>
+            <p>En breve nos comunicaremos contigo a los medios que nos proporcionaste.</p>
+          </div>
         </div>
       </div>
       <div class="spacer"></div>

@@ -3,17 +3,57 @@
 	height: 60px;
 	background-color: $white;
 
+	.mobile-menu {
+		width: 100%;
+		height: 60px;
+		display: block;
+		background-color: $dark-gray;
+	}
+
 	.desktop-menu {
 	  display: none;
 	  text-align: center;
 	  font-size: 18px;
 
+		.desktopMenuItem {
+
+			&.selected {
+				background-image: url(#{$img-url}/common/selected.png);
+				background-position: bottom center;
+				background-repeat: no-repeat;
+			}
+		}
+
 		a, a:visited {
 			color:$dark-gray;
 			transition: color 0.3s linear;
+			line-height: 3em;
+			display: block;
+			vertical-align: middle;
 
 			&:hover{
 				color: $black;
+			}
+		}
+	}
+
+	&.black {
+		@extend .main-menu;
+		height: 60px;
+		background-color: $black;
+
+		.desktop-menu {
+		  display: none;
+		  text-align: center;
+		  font-size: 18px;
+
+			a, a:visited {
+				color:$light-gray;
+				transition: color 0.3s linear;
+
+				&:hover{
+					color: $white;
+				}
 			}
 		}
 	}
@@ -32,39 +72,22 @@
 	}
 }
 
-.main-menu.black {
-	@extend .main-menu;
-	background-color: $black;
-
-	.desktop-menu {
-	  display: none;
-	  text-align: center;
-	  font-size: 18px;
-
-		a, a:visited {
-			color:$light-gray;
-			transition: color 0.3s linear;
-
-			&:hover{
-				color: $white;
-			}
-		}
-	}
-}
 
 @include respond-to('medium'){
 	.main-menu {
-		height: 100px;
-		padding:10px 0px;
+		height: 120px;
 
 		.desktop-menu {
 	    display: block;
 	  }
+
+		.mobile-menu {
+			display: none;
+		}
 	}
 
 	.main-menu.black {
-		height: 100px;
-		padding:10px 0px;
+		height: 120px;
 
 		.desktop-menu {
 	    display: block;
@@ -128,7 +151,7 @@
 		right: 0;
 		top: 0;
 		position: absolute;
-		background-color: rgba(38, 84, 133, 0.54);
+		background-color: rgba(38, 38, 38, 0.54);
 		border-radius: 50%;
 		z-index: 18;
 		overflow: hidden;
@@ -159,12 +182,12 @@
 			}
 			a{
 				color: #fff;
-				font-family: 'Lato', Arial, Helvetica, sans-serif;
-				font-size: 16px;
+				font-family: inherit;;
+				font-size: 18px;
 				width: 100%;
 				display: block;
 				float: left;
-				line-height: 40px;
+				margin-top: 30px;
 			}
 		}
 	}

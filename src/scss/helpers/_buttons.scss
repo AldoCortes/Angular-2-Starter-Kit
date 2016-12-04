@@ -1,7 +1,7 @@
 .social-link {
   background-image: url(#{$img-url}/common/buttons.png);
-  width:90px;
-  height: 79px;
+  width:60px;
+  height: 53px;
   background-repeat: no-repeat;
   /*transition-property: background;
   transition-duration: 0.2s;
@@ -13,14 +13,14 @@
 .social-link.facebook {
   background-position: 0 0;
   &:hover {
-    background-position: 0 -79px;
+    background-position: 0 -53px;
   }
 }
 
 .social-link.instagram {
-  background-position: -90px 0;
+  background-position: -60px 0;
   &:hover {
-    background-position: -90px -79px;
+    background-position: -60px -53px;
   }
 }
 

@@ -1,7 +1,9 @@
 <?php
-$user_name = $_POST['user'];
-$mail = $_POST['email'];
-$message = $_POST['message'];
+$entityBody = json_decode(file_get_contents('php://input'));
+
+$user_name = $entityBody->name;
+$mail = $entityBody->email;
+$message = $entityBody->message;
 $ip = $_SERVER['REMOTE_ADDR'];
 
 header('Content-Type: application/json');
