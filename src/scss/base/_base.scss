@@ -104,6 +104,10 @@ header {
   display: block;
 }
 
+.handed {
+  cursor: pointer;
+}
+
 .icon {
   background-image: url(#{$img-url}/common/icons.png);
   background-repeat: no-repeat;

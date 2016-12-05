@@ -4,4 +4,5 @@ import {Component} from '@angular/core';
   selector: 'services',
   template: require('../views/services.html')
 })
+
 export class ServicesComponent {}
